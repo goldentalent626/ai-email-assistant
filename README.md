@@ -36,7 +36,7 @@ Works on Raspberry Pi, Debian, Ubuntu, LMDE, or any headless Linux server with 
 
 1. **Clone the repo**  
    ```bash
-   git clone https://github.com/ericrosenberg1/ai-email-assistant.git
+   git clone https://github.com/goldentalent626/ai-email-assistant.git
    cd ai-email-assistant
    ```
 
@@ -146,26 +146,6 @@ ai-email-assistant/
 
 ---
 
-## ⏱️ Scheduling with Cron
-
-Edit your crontab:
-
-```bash
-crontab -e
-```
-
-Add these lines (replace `eric` with your username):
-
-```cron
-# Upload "AI_Sent" labeled emails every hour
-0 * * * * cd /home/eric/ai-email-assistant && /home/eric/ai-email-assistant/venv/bin/python upload_ai_sent.py >> /home/eric/ai-email-assistant/upload.log 2>&1
-
-# Draft replies for inbox messages every 15 minutes
-*/15 * * * * cd /home/eric/ai-email-assistant && /home/eric/ai-email-assistant/venv/bin/python draft_replies.py >> /home/eric/ai-email-assistant/draft.log 2>&1
-```
-
----
-
 ## 🔐 Security
 
 - **Draft‑only**: No emails are ever sent automatically  
@@ -184,11 +164,6 @@ Add these lines (replace `eric` with your username):
 
 ---
 
-## 🧑‍💻 Maintainer
-
-**Eric Rosenberg** – https://eric.money
-
----
 
 ## 📄 License
 
